@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+.homepageContainer {
+  background-image: linear-gradient(135deg, #f7f3ef 0%, #c0aa99 100%);
+  background-attachment: fixed;
+  /* background-color: #f6f3ef; */
+  min-height: calc(100vh - 70px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.homepageContainer .logoContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.text {
+  font-weight: 500;
+}
+
+.homepageContainer header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 5.5rem;
+}
+
+.homepageContainer > header button {
+  font-size: 16px;
+  padding: 0.6em 1.2em;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.homepageContainer > header button:hover {
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.homepageContainer main {
+  padding: 0 3.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  align-items: center;
+}
+.homepageContainer .leftSection h1 {
+  font-size: 72px;
+  line-height: 150%;
+}
+
+.leftSection .chatWithUs {
+  background-color: #fccb5e;
+  /* color: white; */
+  /* font-family: "Roboto", sans-serif; */
+  min-height: fit-content;
+  max-width: 280px;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  margin-top: 4rem;
+  cursor: text;
+  box-shadow: -0px 0px 8px 0 rgb(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leftSection .chatWithUs:hover{
+  cursor: pointer;
+  background-color: #fbbf4e; /* Change background color on hover */
+  box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.3); /* Change box shadow on hover */
+}
+.chatWithUs .cursor {
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  margin-left: 4px;
+  animation: blink-cursor-animation 1s infinite ease;
+}
+
+@keyframes blink-cursor-animation {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* add keyframes to animate the cursor */
+
+.homepageContainer .rightSection {
+  height: 60%;
+  width: 480px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* box-shadow: -2px 2px 12px 0 rgb(0, 0, 0, 0.1); */
+}
+.aboutUs {
+  background-image: linear-gradient(
+    135deg,
+    rgba(168, 8, 67, 0.913) 0%,
+    rgba(122, 12, 5, 0.913) 100%
+  );
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  margin: auto;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.aboutUs > div {
+  text-align: justify;
+}
+
+.statsBox {
+  background-image: linear-gradient(
+    135deg,
+    rgba(75, 75, 75, 0.2) 0%,
+    rgba(29, 29, 29, 0.3) 100%
+  );
+  padding: 50px;
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.lato {
+  /* font-family: "Lato", sans-serif; */
+}
+.statsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1225px;
+  margin: auto;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.footer {
+  background: #1e1c1b;
+  margin-top: 8rem;
+  color: white;
+  min-height: 300px;
+}
+
+.scrollButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.scrollButton:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 1350px) {
+  .homepageContainer .rightSection {
+    height: 60%;
+    width: 350px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    /* box-shadow: -2px 2px 12px 0 rgb(0, 0, 0, 0.1); */
+  }
+  .homepageContainer .leftSection h1 {
+    font-size: 50px;
+    line-height: 120%;
+  }
+  .Articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* max-width: 700px; */
+    margin: auto;
+    margin-top: 20px;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .Articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 700px; */
+    margin: auto;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .statsSection {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .homepageContainer .leftSection h1 {
+    font-size: 44px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homepageContainer .leftSection h1 {
+    font-size: 44px;
+  }
+
+  .homepageContainer main {
+    gap: 2rem;
+    padding: 0 2.5rem;
+  }
+  .homepageContainer .rightSection {
+    height: 60%;
+    width: 330px;
+    border-radius: 20px;
+    flex-shrink: 0;
+    /* box-shadow: -2px 2px 12px 0 rgb(0, 0, 0, 0.1); */
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .homepageContainer header {
+    padding: 1rem 3rem;
+  }
+
+  .homepageContainer main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2.5rem;
+  }
+
+  .homepageContainer .leftSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 50%;
+  }
+
+  .homepageContainer .leftSection h1 {
+    font-size: 32px;
+  }
+
+  .leftSection .chatWithUs {
+    margin-top: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .homepageContainer .rightSection {
+    order: -1;
+    width: 300px;
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .homepageContainer header {
+    padding: 1rem 1rem;
+  }
+  .homepageContainer main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .homepageContainer .leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .homepageContainer .leftSection h1 {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .leftSection .chatWithUs {
+    margin-top: 0;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .homepageContainer .rightSection {
+    order: -1;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+/*-----------------------------------------*/
+
+@media only screen and (max-width: 800px) {
+  .headerText {
+    display: none;
+  }
+  .aboutUs {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .statsBox {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+}
